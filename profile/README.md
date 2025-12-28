@@ -14,7 +14,7 @@ It enables developers and teams to:
 
 - Build and operate **multi-tenant e-commerce systems**
 - Host **multiple independent stores** under one platform
-- Support **custom domains and subdomains per tenant**
+- Support **custom domains and subdomains per store**
 - Scale using modern cloud-native architecture
 - Extend and customize business logic freely
 - suitable for real-world SaaS platforms  
@@ -24,7 +24,7 @@ It enables developers and teams to:
 ## 📦 What You’ll Find in This Organization
 
 - Core backend microservices  
-- Frontend applications  
+- Frontend dashboards and multiple theme for store
 - Infrastructure & deployment configurations  
 - Shared libraries and utilities  
 - Documentation & examples  
