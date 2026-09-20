@@ -5,7 +5,7 @@ repositories.
 
 - **Scope** — the rendered profile and its links.
 - **Runs on** — github.com, after the PR merges; the raw Markdown before.
-- **Cases** — 3 (2 verified, 1 not verified)
+- **Cases** — 3 (3 verified, 0 not verified)
 - **Also see** — orchestrator `repos.yaml`, which the repository table mirrors.
 
 ## 00 — Before you start
@@ -24,9 +24,13 @@ Open https://github.com/cvhome-saas in a browser.
 - Result (2026-09-20): fifteen in the manifest, fifteen on the profile, no difference either way, and
   `assets` is marked retired.
 
-### 01.3 The profile renders [not verified]
-- Steps: view the organisation page.
+### 01.3 The profile renders [verified]
+- Steps: open https://github.com/cvhome-saas and read the profile, then check the rendered document rather
+  than the source: count the tables and their rows, and look for leftover Markdown table syntax.
 - Expect: the two tables render as tables; no raw Markdown visible.
+- Result (2026-09-20, after merge): both tables render, 23 rows between them (six ways in plus a header,
+  fifteen repositories plus a header), the two headings read "Start here" and "Repositories", 28 links, and
+  no `|---` sequence survives in the rendered text.
 
 ## REG — regression watchlist
 - None.
