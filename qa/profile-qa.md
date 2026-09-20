@@ -5,20 +5,24 @@ repositories.
 
 - **Scope** — the rendered profile and its links.
 - **Runs on** — github.com, after the PR merges; the raw Markdown before.
-- **Cases** — 3 (0 verified, 3 not verified)
+- **Cases** — 3 (2 verified, 1 not verified)
 - **Also see** — orchestrator `repos.yaml`, which the repository table mirrors.
 
 ## 00 — Before you start
 Open https://github.com/cvhome-saas in a browser.
 
 ## 01 — Content
-### 01.1 Every link resolves [not verified]
-- Steps: click every link in "Start here", every repository link, and the releases link.
-- Expect: each opens the named page; no 404 on the docs site, every repository public.
+### 01.1 Every link resolves [verified]
+- Steps: request every link in the file, following redirects, and check the status.
+- Expect: each answers 200; no 404 on the docs site, every repository public.
+- Result (2026-09-20, after the site deployed): all 25 answered 200. Ten documentation pages across the
+  guide, architecture, guides, development and operations groups, and fifteen repository links.
 
-### 01.2 The repository table matches the manifest [not verified]
-- Steps: compare the table with `repos.yaml` in the orchestrator.
-- Expect: same set of repositories, same kinds; `assets` marked retired.
+### 01.2 The repository table matches the manifest [verified]
+- Steps: compare the linked repository names with the `name:` entries in the orchestrator's `repos.yaml`.
+- Expect: same set, nothing missing, nothing invented; `assets` marked retired.
+- Result (2026-09-20): fifteen in the manifest, fifteen on the profile, no difference either way, and
+  `assets` is marked retired.
 
 ### 01.3 The profile renders [not verified]
 - Steps: view the organisation page.
@@ -28,4 +32,4 @@ Open https://github.com/cvhome-saas in a browser.
 - None.
 
 ## 99 — known gaps
-- The docs-site links resolve only after the site's `docs/architecture-rewrite` PR has merged and deployed.
+- None. The docs-site links needed the site's rewrite merged and deployed, which happened on 2026-09-20.
